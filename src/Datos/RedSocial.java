@@ -4,18 +4,28 @@
  * and open the template in the editor.
  */
 package Datos;
+import java.util.ArrayList;
 
 /**
  *
  * @author MiguelAngel
  */
 public class RedSocial {
+    private String nombre;
+    private ArrayList<UsuarioRegistrado> usuarios;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        
+    public RedSocial(String nombre) {
+        this.nombre = nombre;
+        this.usuarios = new ArrayList<>();
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public ArrayList<UsuarioRegistrado> getUsuarios() {
+        return usuarios;
+    }
+    
     
 }
