@@ -322,7 +322,17 @@ public class ServiciosRedSocial {
         }
     }
     public void listarFotosEtiquetado(UsuarioRegistrado u){
-        
+        if (u.getFotosEtiquetado().isEmpty()) {
+            System.out.println(u.getNombreCompleto().getNombre1() + " no ha sido etiquetado en ninguna foto.");
+        } else {
+            for (Fotografia f : u.getFotosEtiquetado()) {
+                System.out.print("\n\tFoto: \" "+f.getNombre()+" \"" );
+                System.out.print("\n\tDescripcion: "+f.getDescripcion());
+                System.out.print("\n\tAutor: "+f.getAutor().getNombreCompleto().getNombre1()+" "+f.getAutor().getNombreCompleto().getApellido1()+".");
+                System.out.print("\n\tEtiquetados: ");
+                for (UsuarioRegistradoEtiquetado p : f.getEtiquetadosRegistrados())System.out.println("\n\t\t"+p.getEtiquetado().getNombreCompleto().getNombre1()+" "+p.getEtiquetado().getNombreCompleto().getApellido1()+".");
+            }
+        }
     }
     
 }
