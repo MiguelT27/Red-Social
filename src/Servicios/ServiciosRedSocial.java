@@ -138,8 +138,13 @@ public class ServiciosRedSocial {
                         default:
                             System.out.println("OPCION INVALIDA");
                     }
+                    do {
                     System.out.print("Desea cerrar sesion(N) o desea continuar(S):");
                     continuar = lectura.next();
+                    if (continuar.equals("S")==false||continuar.equals("N")==false){
+                        System.out.print("opcion invalida");
+                    }}
+                    while (continuar.equals("S")==false||continuar.equals("N")==false);
                 } while (continuar.equals("S")); 
             }else if (correo.equals(u.getCorreo()) && clave.equals(u.getClaveAcceso()) == false) {
                 System.out.println("\tCLAVE INCORRECTA");
