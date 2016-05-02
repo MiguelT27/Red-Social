@@ -264,7 +264,11 @@ public class ServiciosRedSocial {
                         if (us.getNombreCompleto().getNombre1().equals(nombre1) && us.getNombreCompleto().getNombre2().equals(nombre2) && us.getNombreCompleto().getApellido1().equals(apellido1) && us.getNombreCompleto().getApellido2().equals(apellido2)) {
                             System.out.print("\n\n\t" + us.getNombreCompleto().getNombre1() + " " + us.getNombreCompleto().getNombre2() + " " + us.getNombreCompleto().getApellido1() + " " + us.getNombreCompleto().getApellido2() + " se encuentra registrado en " + r.getNombre());
                             System.out.println("\n\tNICK: " + us.getNick() + "\n\tCORREO:" + us.getCorreo());
+                            try{
                             s.mostrarOpcionesUsuarios(r, us);
+                            }catch (AssertionError a){
+                                System.out.println(a.getMessage());
+                            }
                         }else if (us.getNombreCompleto().getNombre1().equals(nombre1) == false && us.getNombreCompleto().getNombre2().equals(nombre2) == false && us.getNombreCompleto().getApellido1().equals(apellido1) == false && us.getNombreCompleto().getApellido2().equals(apellido2) == false && us == r.getUsuarios().get(r.getUsuarios().size()-1)){
                             throw new InvalidObjectException("El nombre ingresado no se encuentra registrado.");
                         }
@@ -277,7 +281,11 @@ public class ServiciosRedSocial {
                         if (us.getCorreo().equals(correo)) {
                             System.out.print("\n\n\t" + us.getNombreCompleto().getNombre1() + " " + us.getNombreCompleto().getNombre2() + " " + us.getNombreCompleto().getApellido1() + " " + us.getNombreCompleto().getApellido2() + " se encuentra registrado en " + r.getNombre());
                             System.out.println("\n\tNICK: " + us.getNick() + "\n\tCORREO:" + us.getCorreo());
+                            try{
                             s.mostrarOpcionesUsuarios(r, us);
+                            }catch (AssertionError a){
+                                System.out.println(a.getMessage());
+                            }
                         }else if (us.getCorreo().equals(correo) == false && us == r.getUsuarios().get(r.getUsuarios().size()-1)){
                             throw new InvalidObjectException("El correo ingresaddo no se encuentra registrado.");
                         }
@@ -304,7 +312,7 @@ public class ServiciosRedSocial {
                 case 2:
                     s.listarFotosEtiquetado(u);
                 default:
-                    throw new AssertionError();
+                    throw new AssertionError("Opcion invalida");
             }
             System.out.print("Desea continuar (S/N):");
             respuesta = lectura.next();
