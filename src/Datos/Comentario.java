@@ -18,5 +18,13 @@ public class Comentario {
         this.texto = texto;
         this.fechaDeCreacion = fechaDeCreacion;
     }
+
+    public String getTexto() {
+        return texto;
+    }
+
+    public Date getFechaDeCreacion() {
+        return fechaDeCreacion;
+    }
     
 }

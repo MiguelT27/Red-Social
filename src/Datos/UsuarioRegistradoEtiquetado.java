@@ -20,6 +20,11 @@ public class UsuarioRegistradoEtiquetado {
         this.coorY = coorY;
     }
 
+    public UsuarioRegistrado getEtiquetado() {
+        return etiquetado;
+    }
+    
+
 
     
 }

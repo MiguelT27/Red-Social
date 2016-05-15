@@ -6,6 +6,7 @@
 package UI;
 import java.util.*;
 import Servicios.*;
+import java.io.IOException;
 /**
  *
  * @author MiguelAngel
@@ -13,7 +14,7 @@ import Servicios.*;
 public class UI {
     
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         ServiciosRedSocial s = new ServiciosRedSocial();
         Scanner lectura = new Scanner(System.in);
         int opcion;

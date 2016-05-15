@@ -36,6 +36,28 @@ public class Fotografia {
     public void setEtiquetadosNoRegistrados(UsuarioNoRegistradoEtiquetado etiquetadoNoRegistrado) {
         this.etiquetadosNoRegistrados.add(etiquetadoNoRegistrado); 
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public UsuarioRegistrado getAutor() {
+        return autor;
+    }
+
+    public UsuarioRegistradoEtiquetado[] getEtiquetadosRegistrados() {
+        return etiquetadosRegistrados;
+    }
+
+    public ArrayList<UsuarioNoRegistradoEtiquetado> getEtiquetadosNoRegistrados() {
+        return etiquetadosNoRegistrados;
+    }
+
+    
     
     
 }
